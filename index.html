@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Claude Programs</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.2em;
+            margin-bottom: 50px;
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .programs-grid {
+            display: grid;
+            gap: 25px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .program-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102,126,234,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .program-card:hover::before {
+            left: 100%;
+        }
+
+        .program-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .program-title {
+            font-size: 1.8em;
+            color: #667eea;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .program-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            flex-shrink: 0;
+        }
+
+        .program-description {
+            color: #666;
+            font-size: 1.05em;
+            line-height: 1.6;
+        }
+
+        .arrow {
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #667eea;
+            font-size: 1.5em;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover .arrow {
+            opacity: 1;
+            right: 25px;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            
+            .subtitle {
+                font-size: 1em;
+            }
+            
+            .program-title {
+                font-size: 1.4em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 My Claude Programs</h1>
+        <p class="subtitle">A collection of AI-powered applications and tools</p>
+        
+        <div class="programs-grid">
+            <a href="https://claude.ai/public/artifacts/097da252-b3da-4370-bd0c-ca7dab420e8d" class="program-card" target="_blank">
+                <div class="program-icon">💡</div>
+                <div class="program-title">German Flash Cards</div>
+                <div class="program-description">Flash Cards for Learning German Language</div>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="https://claude.site/artifacts/YOUR-ARTIFACT-ID-2" class="program-card" target="_blank">
+                <div class="program-icon">🎨</div>
+                <div class="program-title">Program Name 2</div>
+                <div class="program-description">Add a brief description of what this program does and its key features.</div>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="https://claude.site/artifacts/YOUR-ARTIFACT-ID-3" class="program-card" target="_blank">
+                <div class="program-icon">📊</div>
+                <div class="program-title">Program Name 3</div>
+                <div class="program-description">Add a brief description of what this program does and its key features.</div>
+                <span class="arrow">→</span>
+            </a>
+
+            <a href="https://claude.site/artifacts/YOUR-ARTIFACT-ID-4" class="program-card" target="_blank">
+                <div class="program-icon">🎮</div>
+                <div class="program-title">Program Name 4</div>
+                <div class="program-description">Add a brief description of what this program does and its key features.</div>
+                <span class="arrow">→</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+"
